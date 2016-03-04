@@ -16,8 +16,8 @@
 
 				<div class="social-media">
 					<span class="social-media-counter">000</span>
-					<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ $location.absUrl() }}"
-							class="social-media-link facebook" title="Facebook">
+					<a onclick="return encodeShareURL(this, 'facebook');" data-link-origin="{{ $location.absUrl() }}" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ $location.absUrl() }}"
+							class="social-media-link facebook share-link" title="Facebook">
 						<svg width="17" height="17" class="social-media-link-image">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink"
 									xlink:href="https://cdn.edools.com/sebrae-sc/imgs/symbol-defs.svg#icon-facebook"></use>
@@ -26,7 +26,7 @@
 				</div>
 				<div class="social-media">
 					<span class="social-media-counter">000</span>
-					<a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ $location.absUrl() }}"
+					<a onclick="return encodeShareURL(this, 'linkedin');" data-link-origin="{{ $location.absUrl() }}" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ $location.absUrl() }}"
 							class="social-media-link linkedin" title="Linkedin">
 						<svg width="17" height="17" class="social-media-link-image">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -37,7 +37,7 @@
 
 				<div class="social-media">
 					<!-- <span class="social-media-counter">000</span> -->
-					<a target="_blank" href="https://twitter.com/home?status={{ $location.absUrl() }}"
+					<a onclick="return encodeShareURL(this, 'twitter');" data-link-origin="{{ $location.absUrl() }}" target="_blank" href="https://twitter.com/home?status={{ $location.absUrl() }}"
 							class="social-media-link twitter" title="Twitter">
 						<svg width="17" height="17" class="social-media-link-image">
 							<use xmlns:xlink="http://www.w3.org/1999/xlink"

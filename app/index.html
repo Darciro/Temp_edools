@@ -38,6 +38,7 @@
 <script src="bower_components/es5-shim/es5-shim.js"></script>
 <script src="bower_components/json3/lib/json3.min.js"></script>
 <script src="bower_components/bootbox.js/bootbox.js"></script>
+<script src="bower_components/PubSubJS/src/pubsub.js"></script>
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) assets/scripts/app.js -->
@@ -47,6 +48,7 @@
 <script src="assets/scripts/dist/svgxuse.js"></script>
 <script src="assets/scripts/dist/svg4everybody.min.js"></script>
 <script src="assets/scripts/dist/sebrae.js"></script>
+<script src="assets/scripts/dist/utils.js"></script>
 <!-- endbuild -->
 
 <div id="fb-root"></div>
@@ -60,6 +62,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <script>
+console.info(Edools.events);
   Edools.events.subscribe('school.dashboard', function () {
     var firstModuleLink = $('.js-module-link')[0];
     if (firstModuleLink) { firstModuleLink.click(); }
