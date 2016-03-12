@@ -42,8 +42,8 @@
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) assets/scripts/app.js -->
-<script src="assets/scripts/dist/modernizr.js"></script>
 <script src="assets/scripts/dist/jquery-1.10.1.min.js"></script>
+<script src="assets/scripts/dist/modernizr.js"></script>
 <script src="assets/scripts/dist/site.js"></script>
 <script src="assets/scripts/dist/svgxuse.js"></script>
 <script src="assets/scripts/dist/svg4everybody.min.js"></script>
@@ -62,7 +62,6 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <script>
-console.info(Edools.events);
   Edools.events.subscribe('school.dashboard', function () {
     var firstModuleLink = $('.js-module-link')[0];
     if (firstModuleLink) { firstModuleLink.click(); }

@@ -7,17 +7,22 @@
 			<strong>Acesso não autorizado. </strong> Esses são os cursos em que você está matriculado.
 		</div>
 
+		<div class="container">
+			<h2 class="welcome-msg">Meus cursos <span>:)</span></h2>
+			<p>Clique nos cursos abaixo para iniciar as suas aulas.</p>
+		</div>
 		<div class="container dashboard-panel">
-			<section class="card-list masonry">
+			<section class="card-list masonry enrollments">
 				<div hide-on-load="dashboard">
 					<div ng-if="(enrollments == undefined || enrollments.length == 0) && (pendingEnrollments == undefined || pendingEnrollments.length === 0)" class="alert alert-warning">Você ainda não está matriculado em nenhum curso.</div>
-					<article class="card card-color-01 grid-sizer" data-view="10" data-date="10/01/2015" data-price="100" ng-repeat="enrollment in enrollments">
+					<article class="card card-color-01 grid-sizer" data-view="10" data-date="10/01/2015" data-price="100" ng-repeat="enrollment in enrollments" data-course-id="{{ enrollment.course.id }}">
 						<div class="card-info">
 							<span>Online</span>
 							<!--<span>Curso 8h</span>-->
 						</div>
 						<div class="card-image">
-							<img src="assets/images/fke/gestao-recursos-humanos.png" height="137" width="176" alt="" class="vertical-center">
+							<img ng-if="enrollment.course.logo !== null" ng-src="{{ enrollment.course.logo }}" height="137" width="176" alt="" class="vertical-center" />
+							<img ng-if="enrollment.course.logo === null" src="assets/images/fke/gestao-recursos-humanos.png" height="137" width="176" alt="" class="vertical-center" />
 						</div>
 						<div class="card-content">
 							<h3 class="card-title">{{ enrollment.course.title }}</h3>
@@ -38,6 +43,7 @@
 
 							<span class="more-link-btn">Assistir curso</span> </a>
 					</article>
+					<div class="clearfix"></div>
 
 					<div class="row">
 						<div class="col-xs-12">

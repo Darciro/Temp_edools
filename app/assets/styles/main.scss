@@ -270,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
 	animation-iteration: 1;
 
 	animation-name: DrawLine, FadeStroke, FillIn;
-	animation-duration: 4s, 1s, 1s;
+	animation-duration: 0, 1s, 1s;
 	animation-delay: 0, 3.5s, 3.5s;
 }
 
@@ -279,18 +279,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-image .path-sebrae {
-	animation-delay: 1.5s, 2s, 2s;
+	/*animation-delay: 1.5s, 2s, 2s;
 	animation-duration: 2s, 1s, 1s;
 	stroke-dashArray: 471;
-	stroke-dashoffset: 471;
+	stroke-dashoffset: 471;*/
 }
 
 .logo-image .path-bottom,
 .logo-image .path-top {
-	animation-delay: .5s, 2s, 2s;
+	/*animation-delay: .5s, 2s, 2s;
 	animation-duration: 2s, 1s, 1s;
 	stroke-dashArray: 123;
-	stroke-dashoffset: 123;
+	stroke-dashoffset: 123;*/
 }
 
 .header-back-link,
@@ -566,7 +566,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .search {
 	height: 600px;
-	background-image: url(../../images/bkg/banner-1.jpg);
+	background-image: url(../assets/images/banner-1.jpg) !important;
 	background-size: cover;
 	background-position: center center;
 }
@@ -689,6 +689,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .newsletter select{
 	color: #2c3e50;
+}
+
+.newsletter .chosen-search{
+	display: none;
 }
 
 .newsletter-title,
@@ -1157,6 +1161,10 @@ h1, h2, h3, h4, h5, h6 {
 	margin-left: -10px;
 	margin-top: 30px;
 	margin-bottom: 20px;
+}
+
+.card-list.enrollments{
+	height: auto !important;
 }
 
 .center-width-2 .card-list {
@@ -2182,6 +2190,10 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 35px 0;
 }
 
+.home .article-content {
+	padding: 0;
+}
+
 .article-content-text.feedback {
 	margin-bottom: 45px;
 }
@@ -2207,6 +2219,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .article-content-text p a {
 	font-weight: bold;
+}
+
+.article.home{
+	margin-bottom: -55px !important;
 }
 
 /* ==== BOX ==== */
